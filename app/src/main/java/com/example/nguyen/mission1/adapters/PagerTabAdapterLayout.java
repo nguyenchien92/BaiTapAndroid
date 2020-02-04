@@ -61,6 +61,8 @@ public class PagerTabAdapterLayout extends FragmentStatePagerAdapter {
         ivTab.setImageResource(mImages.get(position));
         ivTab.setColorFilter(ContextCompat.getColor(context, R.color.colorTabSelected), PorterDuff.Mode.SRC_ATOP);
 
+
+
         return view;
     }
 

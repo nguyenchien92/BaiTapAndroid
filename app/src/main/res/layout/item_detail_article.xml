@@ -172,11 +172,35 @@
             android:layout_below="@id/ln_header"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
+            android:id="@+id/iv_image_user_comment"
             android:layout_toRightOf="@id/iv_ic_user"
             android:background="@drawable/shape_border_comment"
             android:scaleType="fitXY"
             android:src="@drawable/ic_vin_uni" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="49 phut"
+            android:layout_below="@id/iv_image_user_comment"
+            android:layout_toRightOf="@id/iv_ic_user"
+            android:layout_marginStart="10dp"
+            android:id="@+id/tv_time_comment"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thich"
+            android:id="@+id/tv_like_comment"
+            android:layout_toRightOf="@id/tv_time_comment"
+            android:layout_below="@id/iv_image_user_comment"
+            android:layout_marginStart="70dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tra loi"
+            android:layout_toRightOf="@id/tv_like_comment"
+            android:layout_below="@id/iv_image_user_comment"
+            android:layout_marginStart="90dp"/>
     </RelativeLayout>
 
     <RelativeLayout
