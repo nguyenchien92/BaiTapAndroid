@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item app:showAsAction="never"
+        android:id="@+id/menu_news"
+        android:icon="@drawable/ic_news"
+        android:title="News" />
+    <item app:showAsAction="never"
+        android:id="@+id/menu_market_place"
+        android:icon="@drawable/ic_market_place"
+        android:title="Market place"/>
+    <item app:showAsAction="never"
+        android:id="@+id/menu_group_user"
+        android:icon="@drawable/ic_group_user"
+        android:title="Group user"/>
+    <item app:showAsAction="never"
+        android:id="@+id/menu_favorite"
+        android:icon="@drawable/ic_favorite_24"
+        android:title="Favorite" />
+    <item app:showAsAction="never"
+        android:id="@+id/menu_notification"
+        android:icon="@drawable/ic_notification_24"
+        android:title="Notification" />
+    <item app:showAsAction="never"
+        android:id="@+id/menu_info_me"
+        android:icon="@drawable/ic_menu_26"
+        android:title="InfoMe" />
+
+</menu>

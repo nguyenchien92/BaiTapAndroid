@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_game"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:layout_below="@id/ln_header"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    app:cardMaxElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/all_shape_border_card_view">
+
+        <ImageView
+            android:id="@+id/iv_game"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_game" />
+
+        <LinearLayout
+            android:id="@+id/ln_tap_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:background="@drawable/frag_item_shape_tap_play"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_icon_play"
+                android:layout_width="20dp"
+                android:layout_height="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_play_game"
+                android:textAlignment="center"
+                android:tint="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:text="Tap to Play"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="#FFFFFF"
+                android:textSize="7dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/frag_item_shape_tap_play"
+            android:gravity="center"
+            android:text="x"
+            android:textColor="#FFFFFF" />
+
+        <RelativeLayout
+            android:id="@+id/relative_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_game"
+            android:padding="7dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_icon_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_icon_game"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/image_game" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_title_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/cv_icon_game"
+                android:text="This title game"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_describe_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title_game"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/cv_icon_game"
+                android:text="This is Describe content"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

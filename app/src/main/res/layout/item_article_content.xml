@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1A000000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_icon_article"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_tinh_te_news"
+            app:civ_border_width="1dp"
+            app:civ_border_color="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tv_name_site"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/iv_icon_article"
+            android:text="Tinhte.vn"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <TextView
+            android:id="@+id/tv_time_article"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_site"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/iv_icon_article"
+            android:text="Thứ Tư lúc 16:58 ." />
+
+        <ImageView
+            android:id="@+id/iv_ic_earth"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/tv_name_site"
+            android:layout_toRightOf="@id/tv_time_article"
+            android:src="@drawable/ic_earth" />
+
+        <TextView
+            android:id="@+id/tv_describe_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_ic_earth"
+            android:text="Đẳng cấp quốc tế luôn :)) :))"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="17dp" />
+
+        <View
+            android:id="@+id/view_boundary"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_describe_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_boundary"
+            android:layout_marginTop="10dp"
+            android:text="Tải app Tinhte, cập nhật thông tin, kết nối với cộng đồng công nghệ http://bit.ly/tinhteapp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="17dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A000000">
+
+        <FrameLayout
+            android:id="@+id/frame_layout_content_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/iv_image_content"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_vin_uni" />
+
+            <ImageView
+                android:id="@+id/iv_ic_info_i"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/shape_image_all"
+                android:src="@drawable/ic_info_circle"
+                />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_site_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frame_layout_content_image"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-30dp"
+            android:text="TINHTE.VN" />
+
+        <TextView
+            android:id="@+id/tv_title_article_child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_site_name"
+            android:layout_marginStart="10dp"
+            android:text="Đại học VinUni chính thức khánh thành"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_article_child"
+            android:layout_marginStart="10dp"
+            android:maxLines="1"
+            android:text="Sáng ngày 15/1,Vingroup chính thức khánh thành trường..." />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_count_number_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_like_24"
+            android:gravity="center"
+            android:text=" 999" />
+
+        <TextView
+            android:id="@+id/tv_count_comment_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text=" 135 bình luận  35 lượt chia sẻ" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#1A000000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TextView
+            android:id="@+id/tv_count_number_like_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_like"
+            android:gravity="center"
+            android:text=" Thích"
+            />
+
+        <TextView
+            android:id="@+id/tv_comment_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableStart="@drawable/ic_comment"
+            android:text=" Bình luận" />
+
+        <TextView
+            android:id="@+id/tv_share_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableStart="@drawable/ic_arrow_share"
+            android:text=" Chia sẻ" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#1A000000" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_image_user"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_image_user"
+            app:civ_border_width="1dp"
+            app:civ_border_color="#1A000000" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/iv_image_user"
+            android:background="@drawable/shape_icon_circlre_all"
+            android:hint="Viết bình luận..."
+            android:paddingStart="10dp"
+            android:layout_marginStart="10dp"/>
+
+        <ImageView
+            android:id="@+id/iv_smile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_smile_30" />
+
+        <ImageView
+            android:id="@+id/iv_ic_camera"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toLeftOf="@id/iv_smile"
+            android:src="@drawable/ic_camera_30" />
+    </RelativeLayout>
+</LinearLayout>
