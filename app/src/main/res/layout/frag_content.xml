@@ -6,12 +6,6 @@
     android:layout_height="match_parent">
 
 
-<!--    <FrameLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:id="@+id/frame_layout_content_main">-->
-<!--        -->
-<!--    </FrameLayout>-->
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"

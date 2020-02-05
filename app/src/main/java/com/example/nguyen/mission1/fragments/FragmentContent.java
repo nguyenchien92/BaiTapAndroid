@@ -93,7 +93,7 @@ public class FragmentContent extends Fragment {
         TabLayout.Tab tab = tabLayout.getTabAt(position);
         if (tab != null) {
             tab.setCustomView(null);
-            tab.setCustomView(adapterLayout.getSelectedTabView(position));
+            tab.setCustomView(adapterLayout.getSelectedTabView(position,getChildFragmentManager()));
         }
     }
 
