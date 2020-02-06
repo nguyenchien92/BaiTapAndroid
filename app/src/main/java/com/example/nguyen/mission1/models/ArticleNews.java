@@ -29,6 +29,7 @@ public class ArticleNews {
         this.imageUser = imageUser;
         this.imageIconSite = imageIconSite;
     }
+    public ArticleNews(){}
 
     public int getImageIconSite() {
         return imageIconSite;
