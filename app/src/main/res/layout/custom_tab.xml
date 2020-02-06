@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_gravity="center">
     <ImageView
         android:id="@+id/iv_tab"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:src="@drawable/ic_group_user"
-        android:layout_gravity="center"
         />
-</LinearLayout>
+    <TextView
+        android:layout_marginRight="10dp"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:background="@drawable/shape_badge_tab"
+        android:text="99+"
+        android:gravity="center"
+        android:textSize="5dp"
+        android:textColor="#FFFFFF"
+        android:layout_toRightOf="@id/iv_tab"
+        android:layout_gravity="end"/>
+</FrameLayout>

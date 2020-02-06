@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_ic_user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_image_user"/>
+
+    <LinearLayout
+        android:id="@+id/ln_name_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@id/iv_ic_user"
+        android:background="@drawable/shape_border_comment"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Hecurlus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <TextView
+            android:id="@+id/tv_comment_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Tao cung the s" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/iv_image_user_comment"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:background="@drawable/shape_border_comment"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_vin_uni" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_time_post"
+        android:text="49 phut"
+        android:textSize="7dp"
+        android:layout_below="@id/ln_name_comment"
+        android:layout_toRightOf="@id/iv_ic_user"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_like_comment"
+        android:text="Thich"
+        android:textSize="7dp"
+        android:layout_below="@id/ln_name_comment"
+        android:layout_toRightOf="@id/tv_time_post"
+        android:layout_marginStart="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_rep_comment"
+        android:text="Tra loi"
+        android:textSize="7dp"
+        android:layout_below="@id/ln_name_comment"
+        android:layout_toRightOf="@id/tv_like_comment"
+        android:layout_marginStart="20dp"/>
+</RelativeLayout>

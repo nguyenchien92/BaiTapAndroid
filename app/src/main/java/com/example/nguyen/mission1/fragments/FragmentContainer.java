@@ -16,9 +16,16 @@ public class FragmentContainer extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_container, container, false);
 
-        getFragmentManager().beginTransaction().replace(R.id.frame_container,new FragmentHome(),FragmentHome.class.getSimpleName())
+        getChildFragmentManager().beginTransaction().replace(R.id.frame_container,new FragmentHome(),FragmentHome.class.getSimpleName())
                 .addToBackStack(FragmentHome.class.getSimpleName()).commit();
 
+
+
         return rootView;
+    }
+
+    public void moveToFragment()
+    {
+
     }
 }

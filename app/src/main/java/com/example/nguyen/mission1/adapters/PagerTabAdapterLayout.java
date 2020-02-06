@@ -75,7 +75,6 @@ public class PagerTabAdapterLayout extends FragmentStatePagerAdapter {
         //set property effect for ivTab
 
         ivTab.setImageResource(mImages.get(position));
-
         return view;
     }
 
@@ -91,7 +90,6 @@ public class PagerTabAdapterLayout extends FragmentStatePagerAdapter {
 //        transaction.replace(R.id.frame_container,new FragmentContainer());
 //        transaction.addToBackStack(null);
 //        transaction.commit();
-
 
         return view;
     }

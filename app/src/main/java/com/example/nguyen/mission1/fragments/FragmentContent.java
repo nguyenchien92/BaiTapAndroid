@@ -42,21 +42,26 @@ public class FragmentContent extends Fragment {
 
     private void init() {
         viewPager = rootView.findViewById(R.id.view_pager);
-        tabLayout = rootView.findViewById(R.id.tab_layout);
+        tabLayout = rootView.findViewById(R.id.tab);
 
         adapterLayout = new PagerTabAdapterLayout(getFragmentManager(), getContext());
-        adapterLayout.addFragment(new FragmentHome(), "Home", R.drawable.ic_newspaper_v2);
+        adapterLayout.addFragment(new FragmentContainer(), "Home", R.drawable.ic_newspaper_v2);
+
+
         adapterLayout.addFragment(new FragmentMarketPlace(), "Market place", R.drawable.ic_shop_online_24);
         adapterLayout.addFragment(new FragmentGroupUser(), "Group user", R.drawable.ic_group_user_24);
         adapterLayout.addFragment(new FragmentFavorite(), "Favorite", R.drawable.ic_favorite_24);
         adapterLayout.addFragment(new FragmentNotification(), "Notification", R.drawable.ic_notification_24);
         adapterLayout.addFragment(new FragmentInfoMe(), "Info", R.drawable.ic_menu_26);
 
+
+
         viewPager.setAdapter(adapterLayout);
         tabLayout.setupWithViewPager(viewPager);
 
         highLightCurrentTab(0);
         setEventTabLayout();
+
     }
 
     private void setEventTabLayout() {
@@ -93,7 +98,7 @@ public class FragmentContent extends Fragment {
         TabLayout.Tab tab = tabLayout.getTabAt(position);
         if (tab != null) {
             tab.setCustomView(null);
-            tab.setCustomView(adapterLayout.getSelectedTabView(position,getChildFragmentManager()));
+            tab.setCustomView(adapterLayout.getSelectedTabView(position,getFragmentManager()));
         }
     }
 

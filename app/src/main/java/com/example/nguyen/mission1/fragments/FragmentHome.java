@@ -101,8 +101,8 @@ public class FragmentHome extends Fragment {
             public void clickItem(int position) {
                 FragmentManager mn = getFragmentManager();
                 FragmentTransaction transaction = mn.beginTransaction();
-                transaction.replace(R.id.frame_layout_main, new FragmentItemArticleDetail()
-                                , FragmentItemsArticle.class.getSimpleName());
+                transaction.replace(R.id.frame_container, new FragmentItemArticleDetail()
+                                , FragmentItemArticleDetail.class.getSimpleName());
                 transaction.addToBackStack(FragmentItemArticleDetail.class.getSimpleName());
                 transaction.commit();
             }

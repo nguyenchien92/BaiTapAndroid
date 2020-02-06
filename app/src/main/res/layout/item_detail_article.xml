@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -133,110 +133,116 @@
         android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
         android:text="Phu hop nhat" />
 
-    <RelativeLayout
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp">
+        android:id="@+id/rv_item_comment_user"
+        android:layout_marginStart="10dp"/>
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_ic_user"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_image_user" />
+<!--    <RelativeLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="10dp">-->
 
-        <LinearLayout
-            android:id="@+id/ln_header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_toRightOf="@id/iv_ic_user"
-            android:background="@drawable/shape_border_comment"
-            android:orientation="vertical">
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/iv_ic_user"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:src="@drawable/ic_image_user" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cules Pham"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                android:textSize="17dp"/>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ln_header"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_toRightOf="@id/iv_ic_user"-->
+<!--            android:background="@drawable/shape_border_comment"-->
+<!--            android:orientation="vertical">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tao cung the s" />
-        </LinearLayout>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Cules Pham"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Title"-->
+<!--                android:textSize="17dp"/>-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ln_header"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
-            android:id="@+id/iv_image_user_comment"
-            android:layout_toRightOf="@id/iv_ic_user"
-            android:background="@drawable/shape_border_comment"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_vin_uni" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Tao cung the s" />-->
+<!--        </LinearLayout>-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="49 phut"
-            android:layout_below="@id/iv_image_user_comment"
-            android:layout_toRightOf="@id/iv_ic_user"
-            android:layout_marginStart="10dp"
-            android:id="@+id/tv_time_comment"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Thich"
-            android:id="@+id/tv_like_comment"
-            android:layout_toRightOf="@id/tv_time_comment"
-            android:layout_below="@id/iv_image_user_comment"
-            android:layout_marginStart="70dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tra loi"
-            android:layout_toRightOf="@id/tv_like_comment"
-            android:layout_below="@id/iv_image_user_comment"
-            android:layout_marginStart="90dp"/>
-    </RelativeLayout>
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/ln_header"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:id="@+id/iv_image_user_comment"-->
+<!--            android:layout_toRightOf="@id/iv_ic_user"-->
+<!--            android:background="@drawable/shape_border_comment"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:src="@drawable/ic_vin_uni" />-->
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp">
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="49 phut"-->
+<!--            android:layout_below="@id/iv_image_user_comment"-->
+<!--            android:layout_toRightOf="@id/iv_ic_user"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:id="@+id/tv_time_comment"/>-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Thich"-->
+<!--            android:id="@+id/tv_like_comment"-->
+<!--            android:layout_toRightOf="@id/tv_time_comment"-->
+<!--            android:layout_below="@id/iv_image_user_comment"-->
+<!--            android:layout_marginStart="70dp"/>-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Tra loi"-->
+<!--            android:layout_toRightOf="@id/tv_like_comment"-->
+<!--            android:layout_below="@id/iv_image_user_comment"-->
+<!--            android:layout_marginStart="90dp"/>-->
+<!--    </RelativeLayout>-->
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_ic_user1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_image_user" />
+<!--    <RelativeLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginTop="10dp">-->
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_toRightOf="@id/iv_ic_user1"
-            android:background="@drawable/shape_border_comment"
-            android:orientation="vertical">
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/iv_ic_user1"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:src="@drawable/ic_image_user" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Herl Culy"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                android:textSize="17dp"/>
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_toRightOf="@id/iv_ic_user1"-->
+<!--            android:background="@drawable/shape_border_comment"-->
+<!--            android:orientation="vertical">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tao cung the s" />
-        </LinearLayout>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Herl Culy"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Title"-->
+<!--                android:textSize="17dp"/>-->
 
-    </RelativeLayout>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Tao cung the s" />-->
+<!--        </LinearLayout>-->
+
+<!--    </RelativeLayout>-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
