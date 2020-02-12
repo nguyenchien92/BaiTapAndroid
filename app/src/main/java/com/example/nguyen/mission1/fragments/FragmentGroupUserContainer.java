@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,17 +11,21 @@ import androidx.fragment.app.Fragment;
 
 import com.example.nguyen.mission1.R;
 
-public class FragmentFavorite extends Fragment {
+public class FragmentGroupUserContainer extends Fragment {
     private View rootView;
-    private TextView tvTitle;
-
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_child, container, false);
+        rootView = inflater.inflate(R.layout.fragment_container, container, false);
 
-        tvTitle = rootView.findViewById(R.id.tv_title);
+        getChildFragmentManager().beginTransaction().replace(R.id.frame_container,new FragmentGroupUser(),FragmentGroupUser.class.getSimpleName())
+                .addToBackStack(FragmentGroupUser.class.getSimpleName()).commit();
 
-        tvTitle.setText(FragmentFavorite.class.getSimpleName());
+
 
         return rootView;
+    }
+
+    public void moveToFragment()
+    {
+
     }
 }

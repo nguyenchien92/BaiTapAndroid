@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,9 +14,14 @@ import com.example.nguyen.mission1.R;
 
 public class FragmentInfoMe extends Fragment {
     private View rootView;
+    private TextView tvTitle;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_home, container, false);
+        rootView = inflater.inflate(R.layout.fragment_child, container, false);
+
+        tvTitle = rootView.findViewById(R.id.tv_title);
+
+        tvTitle.setText(FragmentInfoMe.class.getSimpleName());
 
         return rootView;
     }

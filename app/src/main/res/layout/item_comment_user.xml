@@ -43,7 +43,6 @@
             android:id="@+id/iv_image_user_comment"
             android:layout_width="100dp"
             android:layout_height="150dp"
-            android:background="@drawable/shape_border_comment"
             android:scaleType="fitXY"
             android:src="@drawable/ic_vin_uni" />
 

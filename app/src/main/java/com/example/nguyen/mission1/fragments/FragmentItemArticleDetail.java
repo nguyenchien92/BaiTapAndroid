@@ -4,10 +4,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,17 +26,31 @@ public class FragmentItemArticleDetail extends Fragment {
     private View rootView;
     private RecyclerView rvItemComment;
     private List<ArticleNews> mList = new ArrayList<>();
+    private ImageView ivBack;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.item_detail_article, container, false);
 
         rvItemComment = rootView.findViewById(R.id.rv_item_comment_user);
+        ivBack = rootView.findViewById(R.id.iv_back);
 
         createData();
 
         CommentUserAdapter adapter = new CommentUserAdapter(getActivity(), mList);
         rvItemComment.setAdapter(adapter);
         rvItemComment.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager mn = getFragmentManager();
+                Fragment mHome = mn.findFragmentByTag(FragmentHome.class.getSimpleName());
+
+                if (mHome instanceof FragmentHome) {
+                    mn.popBackStack();
+                }
+            }
+        });
 
         return rootView;
     }
@@ -67,11 +84,6 @@ public class FragmentItemArticleDetail extends Fragment {
         mList.add(mNew3);
 
     }
+
+
 }
-//    public void setDisplayUI(ArticleNews articleNew)
-//    {
-//        tvUser.setText(articleNew.getCommentArticle());
-//        tvComment.setText(articleNew.getCommentLink());
-//        ivIconUser.setImageResource(articleNew.getImageUser());
-//        ivImageComment.setImageResource(articleNew.getImageUser());
-//    }
