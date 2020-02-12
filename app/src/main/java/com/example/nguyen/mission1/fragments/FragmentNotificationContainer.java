@@ -13,11 +13,12 @@ import com.example.nguyen.mission1.R;
 
 public class FragmentNotificationContainer extends Fragment {
     private View rootView;
+
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         rootView = inflater.inflate(R.layout.fragment_container, container, false);
-        getChildFragmentManager().beginTransaction().replace(R.id.frame_container,new FragmentNotification(),FragmentNotification.class.getSimpleName())
-                .addToBackStack(FragmentNotification.class.getSimpleName()).commit();
+        getChildFragmentManager().beginTransaction().replace(R.id.frame_container, new FragmentNotification(), FragmentNotification.class.getSimpleName())
+                .commit();
 
         return rootView;
     }

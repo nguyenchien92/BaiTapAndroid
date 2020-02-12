@@ -17,7 +17,7 @@ public class FragmentGroupUserContainer extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_container, container, false);
 
         getChildFragmentManager().beginTransaction().replace(R.id.frame_container,new FragmentGroupUser(),FragmentGroupUser.class.getSimpleName())
-                .addToBackStack(FragmentGroupUser.class.getSimpleName()).commit();
+                .commit();
 
 
 

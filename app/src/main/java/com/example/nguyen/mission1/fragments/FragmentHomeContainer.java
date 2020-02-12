@@ -15,19 +15,18 @@ import com.example.nguyen.mission1.network.IOBackPressed;
 
 import java.util.List;
 
-public class FragmentHomeContainer extends Fragment  {
+public class FragmentHomeContainer extends Fragment {
     private View rootView;
+
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_container, container, false);
 
-        getChildFragmentManager().beginTransaction().replace(R.id.frame_container,new FragmentHome(),FragmentHome.class.getSimpleName())
-                .addToBackStack(FragmentHome.class.getSimpleName()).commit();
-
+        getChildFragmentManager().beginTransaction().replace(R.id.frame_container, new FragmentHome(), FragmentHome.class.getSimpleName())
+                .commit();
 
 
         return rootView;
     }
-
 
 
 }

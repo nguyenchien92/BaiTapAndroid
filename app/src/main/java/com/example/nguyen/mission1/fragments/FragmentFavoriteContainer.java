@@ -17,7 +17,7 @@ public class FragmentFavoriteContainer extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_container, container, false);
 
         getChildFragmentManager().beginTransaction().replace(R.id.frame_container,new FragmentFavorite(),FragmentFavorite.class.getSimpleName())
-                .addToBackStack(FragmentFavorite.class.getSimpleName()).commit();
+                .commit();
 
 
 

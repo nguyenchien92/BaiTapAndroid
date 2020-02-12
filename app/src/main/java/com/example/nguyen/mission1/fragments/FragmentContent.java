@@ -42,7 +42,7 @@ public class FragmentContent extends Fragment implements IOBackPressed {
         viewPager = rootView.findViewById(R.id.view_pager);
         tabLayout = rootView.findViewById(R.id.tab);
 
-        adapterLayout = new PagerTabAdapterLayout(getFragmentManager(), getContext());
+        adapterLayout = new PagerTabAdapterLayout(getChildFragmentManager(), getContext());
         adapterLayout.addFragment(new FragmentHomeContainer(), "Home", R.drawable.ic_newspaper_v2);
         adapterLayout.addFragment(new FragmentMarketPlaceContainer(), "Market place", R.drawable.ic_shop_online_24);
         adapterLayout.addFragment(new FragmentGroupUserContainer(), "Group user", R.drawable.ic_group_user_24);
@@ -124,7 +124,7 @@ public class FragmentContent extends Fragment implements IOBackPressed {
             return true;
         } else {
 
-            if (countBackStack > 1) {
+            if (countBackStack > 0) {
                 childMn.popBackStack(FragmentItemArticleDetail.class.getSimpleName(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 return false;
             } else {

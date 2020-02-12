@@ -17,7 +17,7 @@ public class FragmentMarketPlaceContainer extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_container, container, false);
 
         getChildFragmentManager().beginTransaction().replace(R.id.frame_container,new FragmentMarketPlace(),FragmentMarketPlace.class.getSimpleName())
-                .addToBackStack(FragmentMarketPlace.class.getSimpleName()).commit();
+                .commit();
 
 
 
