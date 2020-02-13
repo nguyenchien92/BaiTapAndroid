@@ -1,6 +1,8 @@
 package com.example.nguyen.mission1.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +50,8 @@ public class FragmentHome extends Fragment {
 
         createDataUser();
         init();
+
+        Log.d(FragmentHome.class.getSimpleName(),"onCreateView");
 
         return rootView;
     }
@@ -131,6 +135,47 @@ public class FragmentHome extends Fragment {
         mRvArticleNews.setAdapter(newsAdapter);
         mRvArticleNews.setLayoutManager(mnNews);
 
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.d(FragmentHome.class.getSimpleName(),"activityCreated");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d(FragmentHome.class.getSimpleName(),"onStart");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d(FragmentHome.class.getSimpleName(),"onResume");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(FragmentHome.class.getSimpleName(),"onPause()");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(FragmentHome.class.getSimpleName(),"onStop()");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d(FragmentHome.class.getSimpleName(),"onDestroyView");
+    }
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        Log.d(FragmentHome.class.getSimpleName(),"onAttach");
     }
 }
 

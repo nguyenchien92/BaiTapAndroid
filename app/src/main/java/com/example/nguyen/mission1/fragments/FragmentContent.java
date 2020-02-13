@@ -129,9 +129,9 @@ public class FragmentContent extends Fragment implements IOBackPressed {
                 return false;
             } else {
                 viewPager.setCurrentItem(0);
-
                 return false;
             }
         }
     }
+
 }
